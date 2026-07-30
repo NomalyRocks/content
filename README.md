@@ -83,12 +83,19 @@ tr:
   it says more than the pattern does. Name it after the slug
   (`opensourcegym.md` → `opensourcegym.png`) so files stay paired.
 
-  **Export at 16:10 — 2432 × 1520 is the exact target.** The slot is 16:10
-  everywhere, and its widest form is 1216 px, so that is a 2× export. Anything
-  else is cropped to fill: a 4:3 screenshot loses the top and bottom 17%. Nothing
-  resizes the file on the way out, so keep the export lean rather than shipping a
-  multi-megabyte PNG — screenshots usually compress better as PNG, photographs as
-  JPEG or WebP.
+  **Export at 16:10 — 1824 × 1140 WebP.** The ratio is the part that matters:
+  the slot is 16:10 everywhere, and anything else is cropped to fill, so a 4:3
+  screenshot loses the top and bottom 17%.
+
+  The width is a judgement call. The slot is at most 1216 px wide (the site rail
+  caps at `76rem`, so a wider monitor does not enlarge it), which makes 1216 ×
+  760 a 1× export, 1824 × 1140 a 1.5×, and 2432 × 1520 a 2×. Past 2432 nothing
+  improves on any display. 1.5× is the recommendation: indistinguishable from 2×
+  in practice at half the pixels.
+
+  Nothing resizes the file on the way out, so the export is what visitors
+  download — choose the format for weight. WebP is usually a third to a half of
+  the equivalent PNG for a UI screenshot, which buys back the extra resolution.
 
   Replacing an image under the same name can take a few minutes to appear —
   GitHub's raw CDN caches it — while a new file name is immediate.
