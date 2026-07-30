@@ -29,6 +29,7 @@ order: 5                    # ascending; decides grid order and "next project"
 year: "2026"                # string, quoted
 code: OPS-05                # short technical label shown above the title
 placeholder: true           # true prints the "Representative brief" label
+link: https://github.com/…  # optional; adds a "Source" row to the detail page
 stack: [Next.js, PostgreSQL]  # not translated, joined with " / "
 en:
   name: Project Name
@@ -71,6 +72,9 @@ tr:
   `false` only when the client name, role, and outcome in the file are real and
   you are allowed to publish them. When it is `false` the site prints the `code`
   where the "Representative brief" label used to be.
+- `link` is optional and must be a full URL. Use it when the work can actually
+  be inspected — a public repository, a live product — not as a decorative
+  credential. It renders as a "Source" row beside client, year, role, and stack.
 - Use `>-` for prose. It folds line breaks into spaces and drops the trailing
   newline, so you can wrap long paragraphs in the file without wrapping them on
   the page.
