@@ -83,9 +83,13 @@ tr:
   it says more than the pattern does. Name it after the slug
   (`opensourcegym.md` → `opensourcegym.png`) so files stay paired.
 
-  The image is cropped to fill its slot, roughly 4:3 on the detail page and
-  wider in the grid, so keep the subject away from the edges. Around 1440px wide
-  is plenty; nothing resizes it, so a multi-megabyte export is downloaded whole.
+  **Export at 16:10 — 2432 × 1520 is the exact target.** The slot is 16:10
+  everywhere, and its widest form is 1216 px, so that is a 2× export. Anything
+  else is cropped to fill: a 4:3 screenshot loses the top and bottom 17%. Nothing
+  resizes the file on the way out, so keep the export lean rather than shipping a
+  multi-megabyte PNG — screenshots usually compress better as PNG, photographs as
+  JPEG or WebP.
+
   Replacing an image under the same name can take a few minutes to appear —
   GitHub's raw CDN caches it — while a new file name is immediate.
 - Use `>-` for prose. It folds line breaks into spaces and drops the trailing
