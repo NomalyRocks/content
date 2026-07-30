@@ -30,6 +30,7 @@ year: "2026"                # string, quoted
 code: OPS-05                # short technical label shown above the title
 placeholder: true           # true prints the "Representative brief" label
 link: https://github.com/…  # optional; adds a "Source" row to the detail page
+image: my-project.png       # optional; file name of an image in this directory
 stack: [Next.js, PostgreSQL]  # not translated, joined with " / "
 en:
   name: Project Name
@@ -75,6 +76,18 @@ tr:
 - `link` is optional and must be a full URL. Use it when the work can actually
   be inspected — a public repository, a live product — not as a decorative
   credential. It renders as a "Source" row beside client, year, role, and stack.
+- `image` is optional. Commit the file into `work/` next to the markdown and put
+  its **file name only** in the field — no folders, no external URL, and no SVG.
+  Without it the project gets the site's generated field pattern, which is a
+  deliberate look rather than a missing-image state, so ship an image only when
+  it says more than the pattern does. Name it after the slug
+  (`opensourcegym.md` → `opensourcegym.png`) so files stay paired.
+
+  The image is cropped to fill its slot, roughly 4:3 on the detail page and
+  wider in the grid, so keep the subject away from the edges. Around 1440px wide
+  is plenty; nothing resizes it, so a multi-megabyte export is downloaded whole.
+  Replacing an image under the same name can take a few minutes to appear —
+  GitHub's raw CDN caches it — while a new file name is immediate.
 - Use `>-` for prose. It folds line breaks into spaces and drops the trailing
   newline, so you can wrap long paragraphs in the file without wrapping them on
   the page.

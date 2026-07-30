@@ -4,6 +4,7 @@ year: "2026"
 code: OSS-01
 placeholder: false
 link: https://github.com/NomalyRocks/OpenSourceGym
+image: opensourcegym.png
 stack: [TypeScript, Express, MongoDB, Redis, React Native, WebSocket, ESP32]
 en:
   name: OpenSourceGym
